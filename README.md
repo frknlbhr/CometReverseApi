@@ -1,5 +1,5 @@
 # CometReverseApi
-Serves several user data from Comet apis with reverse engineering
+Serves user data from Comet platform with reverse engineering
 
 A simple REST Api to fetch and serve data like user profile info, skils and experiences from the platform 'Comet'
 
