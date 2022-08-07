@@ -60,10 +60,10 @@ def experiences(token: str = Header(), db: Session = Depends(get_db)):
 
 
 @app.get("/pull", response_model=AllDataResponse, response_model_by_alias=False, response_model_exclude_none=True)
-def skills(token: str = Header(), db: Session = Depends(get_db)):
+def pull(token: str = Header(), db: Session = Depends(get_db)):
     return fetch_all_data(token, db)
 
 
 @app.post("/fetch", response_model=AllDataResponse, response_model_by_alias=False, response_model_exclude_none=True)
-def skills(auth_request: AuthRequest, db: Session = Depends(get_db)):
+def fetch(auth_request: AuthRequest, db: Session = Depends(get_db)):
     return authenticate_and_fetch_all_data(auth_request, db)
